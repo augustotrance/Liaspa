@@ -145,13 +145,13 @@ function App() {
 
                     {/* Links */}
                     <div>
-                        <h4 className="text-white font-serif text-xl mb-6">Menú Rápido</h4>
+                        <h4 className="text-brand-950 font-serif text-xl mb-6">Menú Rápido</h4>
                         <ul className="space-y-3 text-sm">
                             <li>
                                 <a 
                                     href="#inicio" 
                                     onClick={(e) => handleNavClick(e, 'inicio')}
-                                    className="hover:text-white transition-colors flex items-center gap-2"
+                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Inicio
                                 </a>
@@ -160,7 +160,7 @@ function App() {
                                 <a 
                                     href="#servicios" 
                                     onClick={(e) => handleNavClick(e, 'servicios')}
-                                    className="hover:text-white transition-colors flex items-center gap-2"
+                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Servicios
                                 </a>
@@ -169,7 +169,7 @@ function App() {
                                 <a 
                                     href="#nosotros" 
                                     onClick={(e) => handleNavClick(e, 'nosotros')}
-                                    className="hover:text-white transition-colors flex items-center gap-2"
+                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Nosotros
                                 </a>
@@ -179,25 +179,25 @@ function App() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="text-white font-serif text-xl mb-6">Contacto</h4>
+                        <h4 className="text-brand-950 font-serif text-xl mb-6">Contacto</h4>
                         <ul className="space-y-5 text-sm">
                             <li className="flex items-start gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">Caseros 24, Haedo<br/>Provincia de Buenos Aires</span>
+                                <span className="text-brand-950">Caseros 24, Haedo<br/>Provincia de Buenos Aires</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Phone className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">+54 11 6928-3645</span>
+                                <span className="text-brand-950">+54 11 6928-3645</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Mail className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">liaspamanosypie@gmail.com</span>
+                                <span className="text-brand-950">liaspamanosypie@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -217,14 +217,14 @@ function App() {
                                 </li>
                                 <li className="flex justify-between pt-1">
                                     <span className="text-brand-300">Domingos</span>
-                                    <span className="text-brand-400 font-medium">Cerrado</span>
+                                    <span className="text-white font-medium">Cerrado</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
-                <div className="border-t border-brand-900 mt-20 pt-8 text-center text-xs text-brand-400 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-brand-900 mt-20 pt-8 text-center text-xs text-brand-950 flex flex-col md:flex-row justify-between items-center">
                     <p>
                         &copy; {new Date().getFullYear()} LiaSpa. Diseñado por 
                         <a 
