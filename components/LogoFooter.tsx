@@ -11,7 +11,7 @@ export const LogoFooter: React.FC = () => {
         return (
             // Fallback para el footer (quizás color blanco o un tono claro)
             <div className="flex items-center gap-2">
-                <span className="text-3xl md:text-4xl font-serif text-white tracking-wide" style={{ fontFamily: 'Mulish, serif' }}>LiaSpa</span>
+                <span className="text-3xl md:text-4xl font-serif text-white tracking-wide" style={{ fontFamily: 'Higuera, serif' }}>LiaSpa</span>
                 <span className="text-xl text-brand-400">✦</span>
             </div>
         );
