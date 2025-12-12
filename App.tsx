@@ -112,7 +112,7 @@ function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {/* Brand */}
                     <div className="space-y-6">
-                        <div className="bg-white p-4 rounded-2xl inline-block shadow-lg">
+                        <div className="inline-block">
                             <Logo />
                         </div>
                         <p className="text-sm leading-relaxed max-w-xs text-brand-300">
