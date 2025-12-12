@@ -38,17 +38,39 @@ function App() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { icon: <Clock className="w-8 h-8" />, title: "Atención Personalizada", text: "Sin prisas. Dedicamos el tiempo necesario a cada turno de manicuría, pedicuría y masajes." },
-                        { icon: <MapPin className="w-8 h-8" />, title: "Ubicación Privilegiada", text: "Fácil acceso en pleno centro, diseñado para desconectar del ruido de la ciudad." },
-                        { icon: <Instagram className="w-8 h-8" />, title: "Comunidad Beauty", text: "Seguinos para tips diarios de skincare, cuidado de uñas y bienestar." }
+                        { 
+                            icon: <Clock className="w-8 h-8" />, 
+                            title: "Atención Personalizada", 
+                            text: "Sin prisas. Dedicamos el tiempo necesario a cada turno de manicuría, pedicuría y masajes.",
+                            url: "https://wa.me/+541169283645?text=Me%20interesa%20la%20atención%20personalizada." // URL de WhatsApp
+                        },
+                        { 
+                            icon: <MapPin className="w-8 h-8" />, 
+                            title: "Ubicación", 
+                            text: "Fácil acceso en pleno centro, diseñado para desconectar del ruido de la ciudad.",
+                            url: "https://maps.app.goo.gl/iSSiQ2tdyQuJv5FL8" // URL de Maps o Instagram
+                        },
+                        { 
+                            icon: <Instagram className="w-8 h-8" />, 
+                            title: "Instagram", 
+                            text: "Seguinos para tips diarios de skincare, cuidado de uñas y bienestar.",
+                            url: "https://www.instagram.com/liaspa_manos_y_pies/" // URL de Instagram
+                        }
                     ].map((item, i) => (
-                        <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
+                        <a 
+                            key={i} 
+                            href={item.url} // Usamos la nueva URL
+                            target="_blank" // Abrir en una nueva pestaña
+                            rel="noopener noreferrer" 
+                            className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-brand-100/50 block cursor-pointer" // Añadimos 'block' para que <a> ocupe el espacio
+                        >
+                            {/* ... Contenido de la tarjeta ... */}
                             <div className="w-16 h-16 bg-brand-50 rounded-2xl rounded-tr-[2rem] flex items-center justify-center mx-auto mb-6 text-brand-600">
                                 {item.icon}
                             </div>
                             <h4 className="font-serif font-bold text-xl text-brand-900 mb-3">{item.title}</h4>
                             <p className="text-sm text-slate-500 leading-relaxed">{item.text}</p>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
@@ -163,19 +185,19 @@ function App() {
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">Av. Principal 1234, Local 5<br/>Buenos Aires, Argentina</span>
+                                <span className="text-brand-200">Caseros 24, Haedo<br/>Provincia de Buenos Aires, Argentina</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Phone className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">+54 11 1234-5678</span>
+                                <span className="text-brand-200">+54 11 6928-3645</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Mail className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">turnos@liaspa.com.ar</span>
+                                <span className="text-brand-200">liaspamanosypie@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -187,11 +209,11 @@ function App() {
                             <ul className="space-y-3 text-sm">
                                 <li className="flex justify-between border-b border-brand-800/50 pb-2">
                                     <span className="text-brand-300">Lun - Vie</span>
-                                    <span className="text-white font-medium">09:00 - 20:00</span>
+                                    <span className="text-white font-medium">08:00 - 18:30</span>
                                 </li>
                                 <li className="flex justify-between border-b border-brand-800/50 pb-2">
                                     <span className="text-brand-300">Sábados</span>
-                                    <span className="text-white font-medium">10:00 - 18:00</span>
+                                    <span className="text-white font-medium">08:00 - 14:00</span>
                                 </li>
                                 <li className="flex justify-between pt-1">
                                     <span className="text-brand-300">Domingos</span>
@@ -203,10 +225,27 @@ function App() {
                 </div>
                 
                 <div className="border-t border-brand-900 mt-20 pt-8 text-center text-xs text-brand-400 flex flex-col md:flex-row justify-between items-center">
-                    <p>&copy; {new Date().getFullYear()} LiaSpa. Diseñado para tu bienestar.</p>
-                    <div className="flex gap-6 mt-4 md:mt-0">
-                        <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
-                        <a href="#" className="hover:text-white transition-colors">Términos y Condiciones</a>
+                    <p>
+                        &copy; {new Date().getFullYear()} LiaSpa. Diseñado por 
+                        <a 
+                            href="https://www.ejemplo.com/crea-studio-design" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="font-bold hover:text-white transition-colors"
+                        >
+                            CREA Studio Design
+                        </a>
+                        .
+                    </p>
+                    <div className="flex flex-col gap-2 mt-4 md:mt-0 md:items-end"> 
+                        <div className="flex gap-6 justify-center md:justify-end">
+                            <a href="/politicas de privacidad.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Privacidad</a>
+                            <a href="/terminos y condiciones.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Términos y Condiciones</a>
+                        </div>
+        
+                        <p className="text-center md:text-right">
+                            Al contactarnos por WhatsApp aceptás nuestra Política de Privacidad y los términos de uso de WhatsApp
+                        </p>
                     </div>
                 </div>
             </div>
