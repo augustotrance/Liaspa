@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-black/20"></div> {/* Extra tint layer */}
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left pt-24 lg:pt-32">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left pt-12 lg:pt-32">
                 <div className="md:w-3/4 lg:w-1/2">
                     <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 animate-fade-in-up">
                         <span className="text-white font-bold tracking-[0.2em] uppercase text-xs">
