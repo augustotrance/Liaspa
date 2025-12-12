@@ -113,7 +113,7 @@ function App() {
                     {/* Brand */}
                     <div className="space-y-6">
                         <div className="inline-block">
-                            <Logo />
+                            <LogoFooter />
                         </div>
                         <p className="text-sm leading-relaxed max-w-xs text-brand-300">
                             Tu refugio personal para restaurar el cuerpo y la mente. 
