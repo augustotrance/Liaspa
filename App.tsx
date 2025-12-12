@@ -129,7 +129,7 @@ function App() {
 
         {/* Footer / Contact */}
         {/* Contrast Fix: Used brand-950 for deeper background and text-brand-200/300 for clear text */}
-        <footer id="contacto" className="bg-brand-950 text-brand-200 pt-24 pb-12 border-t border-brand-900">
+        <footer id="contacto" className="bg-[#99CCFF] text-brand-950 pt-24 pb-12 border-t border-brand-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {/* Brand */}
@@ -185,7 +185,7 @@ function App() {
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-200">Caseros 24, Haedo<br/>Provincia de Buenos Aires, Argentina</span>
+                                <span className="text-brand-200">Caseros 24, Haedo<br/>Provincia de Buenos Aires</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
@@ -233,14 +233,14 @@ function App() {
                             rel="noopener noreferrer" 
                             className="font-bold hover:text-white transition-colors"
                         >
-                            CREA Studio Design
+                             CREA Studio Design
                         </a>
                         .
                     </p>
                     <div className="flex flex-col gap-2 mt-4 md:mt-0 md:items-end"> 
                         <div className="flex gap-6 justify-center md:justify-end">
-                            <a href="/politicas de privacidad.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Privacidad</a>
-                            <a href="/terminos y condiciones.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Términos y Condiciones</a>
+                            <a href="liaspa/public/politicas de privacidad.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Política de Privacidad</a>
+                            <a href="liaspa/public/terminos y condiciones.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Términos y Condiciones</a>
                         </div>
         
                         <p className="text-center md:text-right">
