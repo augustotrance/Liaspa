@@ -28,7 +28,7 @@ export const ServiceCard: React.FC<Props> = ({ category, index }) => {
         : 'rounded-tr-[3rem] rounded-bl-[5rem] rounded-tl-[1rem] rounded-br-[1rem]';
 
     return (
-        <section className="relative w-full py-16 md:py-24">
+        <section className="relative w-full py-12 md:py-16">
              {/* Dynamic background decoration */}
             <div className={`absolute top-0 ${isReversed ? 'right-0' : 'left-0'} w-1/2 h-full bg-gradient-to-b from-brand-50 to-transparent -z-10 rounded-full blur-3xl opacity-60`}></div>
 
