@@ -38,39 +38,17 @@ function App() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[
-                        { 
-                            icon: <Clock className="w-8 h-8" />, 
-                            title: "Atención Personalizada", 
-                            text: "Sin prisas. Dedicamos el tiempo necesario a cada turno de manicuría, pedicuría y masajes.",
-                            url: "https://wa.me/+541169283645?text=Me%20interesa%20la%20atención%20personalizada." // URL de WhatsApp
-                        },
-                        { 
-                            icon: <MapPin className="w-8 h-8" />, 
-                            title: "Ubicación", 
-                            text: "Fácil acceso en pleno centro, diseñado para desconectar del ruido de la ciudad.",
-                            url: "https://maps.app.goo.gl/iSSiQ2tdyQuJv5FL8" // URL de Maps o Instagram
-                        },
-                        { 
-                            icon: <Instagram className="w-8 h-8" />, 
-                            title: "Instagram", 
-                            text: "Seguinos para tips diarios de skincare, cuidado de uñas y bienestar.",
-                            url: "https://www.instagram.com/liaspa_manos_y_pies/" // URL de Instagram
-                        }
+                        { icon: <Clock className="w-8 h-8" />, title: "Atención Personalizada", text: "Sin prisas. Dedicamos el tiempo necesario a cada turno de manicuría, pedicuría y masajes." },
+                        { icon: <MapPin className="w-8 h-8" />, title: "Ubicación Privilegiada", text: "Fácil acceso en pleno centro, diseñado para desconectar del ruido de la ciudad." },
+                        { icon: <Instagram className="w-8 h-8" />, title: "Comunidad Beauty", text: "Seguinos para tips diarios de skincare, cuidado de uñas y bienestar." }
                     ].map((item, i) => (
-                        <a 
-                            key={i} 
-                            href={item.url} // Usamos la nueva URL
-                            target="_blank" // Abrir en una nueva pestaña
-                            rel="noopener noreferrer" 
-                            className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-brand-100/50 block cursor-pointer" // Añadimos 'block' para que <a> ocupe el espacio
-                        >
-                            {/* ... Contenido de la tarjeta ... */}
+                        <div key={i} className="bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-brand-100/50">
                             <div className="w-16 h-16 bg-brand-50 rounded-2xl rounded-tr-[2rem] flex items-center justify-center mx-auto mb-6 text-brand-600">
                                 {item.icon}
                             </div>
                             <h4 className="font-serif font-bold text-xl text-brand-900 mb-3">{item.title}</h4>
                             <p className="text-sm text-slate-500 leading-relaxed">{item.text}</p>
-                        </a>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -129,7 +107,7 @@ function App() {
 
         {/* Footer / Contact */}
         {/* Contrast Fix: Used brand-950 for deeper background and text-brand-200/300 for clear text */}
-        <footer id="contacto" className="bg-[#99CCFF] text-brand-950 pt-24 pb-12 border-t border-brand-900">
+        <footer id="contacto" className="bg-brand-950 text-brand-200 pt-24 pb-12 border-t border-brand-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {/* Brand */}
@@ -145,13 +123,13 @@ function App() {
 
                     {/* Links */}
                     <div>
-                        <h4 className="text-brand-950 font-serif text-xl mb-6">Menú Rápido</h4>
+                        <h4 className="text-white font-serif text-xl mb-6">Menú Rápido</h4>
                         <ul className="space-y-3 text-sm">
                             <li>
                                 <a 
                                     href="#inicio" 
                                     onClick={(e) => handleNavClick(e, 'inicio')}
-                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
+                                    className="hover:text-white transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Inicio
                                 </a>
@@ -160,7 +138,7 @@ function App() {
                                 <a 
                                     href="#servicios" 
                                     onClick={(e) => handleNavClick(e, 'servicios')}
-                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
+                                    className="hover:text-white transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Servicios
                                 </a>
@@ -169,7 +147,7 @@ function App() {
                                 <a 
                                     href="#nosotros" 
                                     onClick={(e) => handleNavClick(e, 'nosotros')}
-                                    className="hover:text-brand-950 transition-colors flex items-center gap-2"
+                                    className="hover:text-white transition-colors flex items-center gap-2"
                                 >
                                     <span className="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>Nosotros
                                 </a>
@@ -179,25 +157,25 @@ function App() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="text-brand-950 font-serif text-xl mb-6">Contacto</h4>
+                        <h4 className="text-white font-serif text-xl mb-6">Contacto</h4>
                         <ul className="space-y-5 text-sm">
                             <li className="flex items-start gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-950">Caseros 24, Haedo<br/>Provincia de Buenos Aires</span>
+                                <span className="text-brand-200">Av. Principal 1234, Local 5<br/>Buenos Aires, Argentina</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Phone className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-950">+54 11 6928-3645</span>
+                                <span className="text-brand-200">+54 11 1234-5678</span>
                             </li>
                             <li className="flex items-center gap-4">
                                 <div className="bg-brand-900/50 p-2.5 rounded-xl text-brand-400">
                                     <Mail className="w-5 h-5" />
                                 </div>
-                                <span className="text-brand-950">liaspamanosypie@gmail.com</span>
+                                <span className="text-brand-200">turnos@liaspa.com.ar</span>
                             </li>
                         </ul>
                     </div>
@@ -209,22 +187,22 @@ function App() {
                             <ul className="space-y-3 text-sm">
                                 <li className="flex justify-between border-b border-brand-800/50 pb-2">
                                     <span className="text-brand-300">Lun - Vie</span>
-                                    <span className="text-white font-medium">08:00 - 18:30</span>
+                                    <span className="text-white font-medium">09:00 - 20:00</span>
                                 </li>
                                 <li className="flex justify-between border-b border-brand-800/50 pb-2">
                                     <span className="text-brand-300">Sábados</span>
-                                    <span className="text-white font-medium">08:00 - 14:00</span>
+                                    <span className="text-white font-medium">10:00 - 18:00</span>
                                 </li>
                                 <li className="flex justify-between pt-1">
                                     <span className="text-brand-300">Domingos</span>
-                                    <span className="text-white font-medium">Cerrado</span>
+                                    <span className="text-brand-400 font-medium">Cerrado</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
-                <div className="border-t border-brand-900 mt-20 pt-8 text-center text-xs text-brand-950 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-brand-900 mt-20 pt-8 text-center text-xs text-brand-400 flex flex-col md:flex-row justify-between items-center">
                     <p>
                         &copy; {new Date().getFullYear()} LiaSpa. Diseñado por&nbsp; 
                         <a 
