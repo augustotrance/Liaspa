@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section id="inicio" className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-brand-900 pt-20 pb-32 md:pb-40">
+        <section id="inicio" className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-brand-900 pt-16 pb-32 md:pb-40">
             {/* Background Image with Dark Overlay for Contrast */}
             <div className="absolute inset-0 z-0">
                 {/* 
